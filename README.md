@@ -6,3 +6,4 @@ Some basic task we need to make a fresh install of ubuntu 20.04 to get ready for
 
 1. [Python Env](PythonDev/PythonEnv.md)
 2. [Utilities and Software](Software-Tools/UtilitiesSoftware.md)
+3. [Ubuntu Software](UbuntuSettings/settings.md)

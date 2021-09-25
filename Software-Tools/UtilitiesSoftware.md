@@ -15,7 +15,9 @@ Modify the settings of GNOME as
 
 ## VS Code
 
-1. Log into Github account and **merge** the settings.
+1. Download VS code from (.deb file) https://code.visualstudio.com/Download
+2. Log into github first in browser.
+3. Log into Github account and **merge** or **replace the local** the settings.
 
 ## Setup Git and GitHub
 
