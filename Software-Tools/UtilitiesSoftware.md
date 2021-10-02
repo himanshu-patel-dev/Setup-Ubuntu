@@ -58,3 +58,9 @@ id_ed25519  id_ed25519.pub  known_hosts
 himanshu in .ssh : cat id_ed25519.pub 
 ssh-ed25519 AAAAC3NzaC1lZsdfasdfasdfasdfasdfsM1K1mn22vEwxr3w+x8 py.himanshu.patel@gmail.com
 ```
+
+## Install VLC
+
+```bash
+sudo snap install vlc
+```

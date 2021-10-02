@@ -1,6 +1,6 @@
 # Ubuntu Settings Chagnes
 
-## Set system to pick time from RTC and not UTC to maitain time between windows and Ubuntu same.
+## Set system to pick time from RTC and not UTC to maitain time between windows and Ubuntu same
 
 ```bash
 timedatectl set-local-rtc 1
