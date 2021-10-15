@@ -33,3 +33,19 @@ Warning: The system is configured to read the RTC time in the local time zone.
          If at all possible, use RTC in UTC by calling
          'timedatectl set-local-rtc 0'.
 ```
+
+## Set up VI editor
+
+Go to the below location can create `.vimrc` file
+
+```bash
+cd ~/.vimrc
+```
+
+and put following content in it. This will allow use of backspace and show INSERT mode in vi editor.
+
+```
+set nocp
+set backspace=indent,eol,start
+:set nocompatible
+```
