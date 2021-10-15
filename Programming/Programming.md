@@ -67,52 +67,21 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 Docker version 20.10.8, build 3967b7d
 ```
 
-#### Add user to docker group
-
 ```bash
-~ : docker info
-
-Server:
-ERROR: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/info": dial unix /var/run/docker.sock: connect: permission denied
-```
-
-Then we do not have current user in docker group. Check with below command
-
-```bash
-~ : grep docker /etc/group
-docker:x:998:
-
-~ : echo $USER
-himanshu
-```
-
-Current user not in docker group.
-
-```bash
-~ : sudo usermod -a -G docker $USER
-~ : grep docker /etc/group
-docker:x:998:himanshu
-~ : newgrp docker
-
-~ : docker info
+himanshu@WorkStation:~$ sudo docker info
 Client:
  Context:    default
  Debug Mode: false
  Plugins:
   app: Docker App (Docker Inc., v0.9.1-beta3)
-  buildx: Build with BuildKit (Docker Inc., v0.6.1-docker)
+  buildx: Build with BuildKit (Docker Inc., v0.6.3-docker)
   scan: Docker Scan (Docker Inc., v0.8.0)
 
 Server:
- Containers: 0
+ Containers: 1
   Running: 0
   Paused: 0
-  Stopped: 0
- Images: 0
- Server Version: 20.10.8
- Storage Driver: overlay2
-  Backing Filesystem: extfs
-  Supports d_type: true
-  Native Overlay Diff: true
-  userxattr: false
+  Stopped: 1
+ Images: 1
+ Server Version: 20.10.9
 ```
