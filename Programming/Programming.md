@@ -116,6 +116,28 @@ psql (14.0 (Ubuntu 14.0-1.pgdg21.04+1))
 Type "help" for help.
 
 postgres=# 
+```
+
+OR
+
+```bash
+himanshu@WorkStation:/$ sudo -u postgres psql
+[sudo] password for himanshu: 
+psql (14.0 (Ubuntu 14.0-1.pgdg21.04+1))
+Type "help" for help.
+
+postgres=#
+```
+
+OR
+
+```bash
+himanshu@WorkStation:/$ psql -U postgres -h localhost
+Password for user postgres: 
+psql (14.0 (Ubuntu 14.0-1.pgdg21.04+1))
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+Type "help" for help.
+
 postgres=# 
 ```
 
@@ -142,4 +164,25 @@ postgres=# \du
  Role name |                         Attributes                         | Member of 
 -----------+------------------------------------------------------------+-----------
  postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+```
+
+Change your password
+
+```bash
+postgres=# ALTER USER postgres PASSWORD 'root@123';
+ALTER ROLE
+postgres=#
+```
+
+## Install PgAdmin 4
+
+```bash
+# Install the public key for the repository (if not done previously):
+sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+
+# Create the repository configuration file:
+sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
 ```
