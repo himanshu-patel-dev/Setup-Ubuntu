@@ -86,7 +86,7 @@ Server:
  Server Version: 20.10.9
 ```
 
-## Make current user a member in docker group
+#### Make current user a member in docker group
 
 ```bash
 groups
@@ -96,3 +96,50 @@ docker ps
 ```
 
 Restart the whole system and use `docker info` command without sudo.
+
+
+## Install PostgreSQL
+
+```bash
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+```
+
+Enter PostgreSQL
+
+```bash
+himanshu@WorkStation:/$ sudo su postgres
+postgres@WorkStation:/$ psql
+psql (14.0 (Ubuntu 14.0-1.pgdg21.04+1))
+Type "help" for help.
+
+postgres=# 
+postgres=# 
+```
+
+See databases and users
+
+```psql
+postgres=# 
+postgres=# \l
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+-----------+----------+----------+---------+-------+-----------------------
+ postgres  | postgres | UTF8     | en_IN   | en_IN | 
+ template0 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+(3 rows)
+
+postgres=# 
+postgres=# 
+postgres=# 
+postgres=# \du
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+```
