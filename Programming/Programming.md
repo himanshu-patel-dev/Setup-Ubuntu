@@ -85,3 +85,14 @@ Server:
  Images: 1
  Server Version: 20.10.9
 ```
+
+## Make current user a member in docker group
+
+```bash
+groups
+sudo usermod -aG docker $USER
+exec su -l $USER
+docker ps
+```
+
+Restart the whole system and use `docker info` command without sudo.
