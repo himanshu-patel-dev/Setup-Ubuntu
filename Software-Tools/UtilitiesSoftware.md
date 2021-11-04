@@ -15,9 +15,10 @@ Modify the settings of GNOME as
 
 ## VS Code
 
-1. Download VS code from (.deb file) https://code.visualstudio.com/Download
-2. Log into github first in browser.
-3. Log into Github account and **merge** or **replace the local** the settings.
+- Download VS code from (.deb file) https://code.visualstudio.com/Download
+- Log into github first in browser.
+- Log into Github account and **merge** or **replace the local** the settings.
+- Navigate to `/home/himanshu/.vscode/extensions/alexcvzz.vscode-sqlite-0.13.0/bin` and change permission of file as `chmod +x sqlite-v3.26.0-linux-x64`. Now we can view sqlite db of django in VS Code itself. If required download `sudo apt install sqlite` before changing permmission.
 
 ## Setup Git and GitHub
 
