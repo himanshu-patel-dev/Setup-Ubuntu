@@ -6,6 +6,7 @@
 sudo apt update
 sudo apt install python3-pip
 pip3 --version
+sudo apt-get install libpq-dev
 ```
 
 ## Install Pipenv
