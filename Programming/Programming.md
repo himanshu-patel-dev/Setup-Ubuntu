@@ -212,7 +212,7 @@ sudo apt install pgadmin4
 3. Setup a new VM with the Ubuntu ISO and choose around 1GB of RAM and 15 GB fo Space.
 
 <p align="center">
-  <img src="vm_details.png">
+  <img src="vm_details.png" style="max-width: 60%;">
 </p>
 
 4. Add a Host Network in VM. This network added in VM is also reflected in the host machine.
@@ -222,10 +222,8 @@ $ sudo apt install net-tools
 ```
 
 <p align="center">
-  <img src="host_network_adapter.png">
-<!-- </p>
-<p align="center"> -->
-  <img src="host_network_dhcp.png">
+  <img src="host_network_adapter.png" style="max-width: 50%;">
+  <img src="host_network_dhcp.png" style="max-width: 50%;">
 </p>
 
 Now after starting VM check, your host system will have below interface.
@@ -265,10 +263,10 @@ See the last `enp0s8` this is the host only connection of VM with host machine.
 Also add a rule in VM for port forwarding. Choose the port forwarding option on adapter1 of VM with NAT interface.
 
 <p align="center">
-  <img src="adapter1_nat.png">
+  <img src="adapter1_nat.png" style="max-width: 60%;">
 <!-- </p>
 <p align="center"> -->
-  <img src="adapter1_post_forwarding.png">
+  <img src="adapter1_post_forwarding.png" style="max-width: 60%;">
 </p>
 
 
