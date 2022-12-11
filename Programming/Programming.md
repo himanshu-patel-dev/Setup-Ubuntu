@@ -231,29 +231,3 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 sudo apt-get install curl
 ```
 Here localhost will try to connect of port 2222 of 127.0.0.1 but that port is forwarded on port 22 of VM.
-
-## Install Vim
-
-```
-$ sudo apt install vim
-```
-
-## Install Go Lang
-
-- Remove any existing installation `$ rm -rf /usr/local/go`
-- Download the go tar file from [Go Download](https://go.dev/doc/install) and go to the download location. Untar the zip in `/usr/local` location `$ sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz`
-- Update the `PATH` to point to go binaries `$ export PATH=$PATH:/usr/local/go/bin`
-- Get the full `PATH` and copy it.
-```
-$ echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin
-```
-- Now update the `/etc/environment` file with above path
-```
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin"
-```
-
-## Install Curl
-```
-sudo apt-get install curl
-```
