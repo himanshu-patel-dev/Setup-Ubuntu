@@ -1,0 +1,11 @@
+[alias]
+	s = status
+	co = checkout
+	b = branch
+	lg = log --oneline --graph --decorate --all
+	c = commit
+[user]
+	name = himanshu.patel
+	email = py.himanshu.patel@gmail.com
+[core]
+	editor = nvim
